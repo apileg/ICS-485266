@@ -21,12 +21,11 @@ menu = console_menu_subtitle("File path will be here!")
 
 # A FunctionItem runs a Python function when selected
 # TODO: To prevent the window from closing; now workaround
-function_item = FunctionItem("Call a Python function", read_file, args=None, kwargs=None, menu=ConsoleMenu,
-                             should_exit=False)
-
+print_excel_table = FunctionItem("Print excel table", read_file, args=None, kwargs=None, menu=ConsoleMenu,
+                                 should_exit=False)
 
 # Once we're done creating them, we just add the items to the menu
-menu.append_item(function_item)
+menu.append_item(print_excel_table)
 
 # Finally, we call show to show the menu and allow the user to interact
 menu.show()
