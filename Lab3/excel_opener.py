@@ -10,6 +10,7 @@ def open_file():
     try:
         # Hide tkinter root window
         Tk().withdraw()
+        # Filepath window dialog
         filepath = askopenfilename(filetypes=[("Excel files", ".xlsx .xls")])
         return filepath
     except Warning:
