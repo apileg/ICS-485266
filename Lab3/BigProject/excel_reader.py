@@ -16,6 +16,7 @@ def read_file():
 
 
 def read_file_column():
+    print(f"Available columns: {get_all_columns()}\n")
     # Variables
     column = input("Enter name of column: ")
 
