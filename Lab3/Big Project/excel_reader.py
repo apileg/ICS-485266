@@ -15,13 +15,15 @@ def read_file():
         print("Oops! I can't find the file.")
 
 
-def read_file_column(column: str):
-    try:
-        # Make table data structure
+def read_file_column():
+    column = input("Enter name of column: ")
+
+    # Make table data structure
+    if column in get_all_columns():
         df = pd.DataFrame(data, columns=[column])
         print(df)
-    except FileNotFoundError:
-        print("Oops! I can't find the file.")
+    else:
+        print("Oops! I can't find the column.")
 
 
 def get_all_columns():
