@@ -8,7 +8,6 @@ import excel_opener
 from excel_reader import *
 
 # Variables
-filepath = str
 column = get_all_columns()
 
 
@@ -18,7 +17,7 @@ def console_menu_subtitle(subtitle: str):
 
 
 # Create the menu
-menu = console_menu_subtitle("File path will be here!")
+menu = ConsoleMenu("Laboratory work", excel_opener.get_file_path())
 
 # A FunctionItem runs a Python function when selected
 # TODO: To prevent the window from closing; now workaround

@@ -2,6 +2,10 @@
 from tkinter import Tk
 from tkinter.filedialog import askopenfilename
 
+# Variables
+tkinter_hide_window = Tk().withdraw()
+filepath = askopenfilename(filetypes=[("Excel files", ".xlsx .xls")])
+
 
 def open_file():
     """
@@ -9,9 +13,12 @@ def open_file():
     """
     try:
         # Hide tkinter root window
-        Tk().withdraw()
+        tkinter_hide_window
         # Filepath window dialog
-        filepath = askopenfilename(filetypes=[("Excel files", ".xlsx .xls")])
         return filepath
     except Warning:
         print("Oops! File open error.")
+
+
+def get_file_path():
+    return filepath
