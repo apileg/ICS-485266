@@ -26,6 +26,8 @@ print_excel_table = FunctionItem("Print excel table", read_file, args=None, kwar
 
 print_excel_table_column = FunctionItem("Print excel column", read_file_column, args=None, kwargs=None,
                                         menu=ConsoleMenu, should_exit=False)
+
+
 # Once we're done creating them, we just add the items to the menu
 menu.append_item(print_excel_table)
 menu.append_item(print_excel_table_column)
