@@ -16,10 +16,11 @@ def read_file():
 
 
 def read_file_column():
+    # Variables
     column = input("Enter name of column: ")
 
-    # Make table data structure
     if column in get_all_columns():
+        # Make table data structure
         df = pd.DataFrame(data, columns=[column])
         print(df)
     else:
