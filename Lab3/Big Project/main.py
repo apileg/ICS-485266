@@ -24,7 +24,7 @@ menu = console_menu_subtitle("File path will be here!")
 # TODO: To prevent the window from closing; now workaround
 print_excel_table = FunctionItem("Print excel table", read_file, args=None, kwargs=None, menu=ConsoleMenu,
                                  should_exit=False)
-# TODO: Make columns display and argument passing into args array
+
 print_excel_table_column = FunctionItem("Print excel column", read_file_column, args=None, kwargs=None,
                                         menu=ConsoleMenu, should_exit=False)
 # Once we're done creating them, we just add the items to the menu
