@@ -16,7 +16,7 @@ def open_file():
         tkinter_hide_window
         # Filepath window dialog
         return filepath
-    except Warning:
+    except FileNotFoundError:
         print("Oops! File open error.")
 
 
