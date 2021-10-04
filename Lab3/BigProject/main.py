@@ -7,6 +7,8 @@ from consolemenu.items import *
 import excel_opener
 from excel_reader import *
 
+from make_plot import *
+
 # Variables
 column = get_all_columns()
 
@@ -27,10 +29,14 @@ print_excel_table = FunctionItem("Print excel table", read_file, args=None, kwar
 print_excel_table_column = FunctionItem("Print excel column", read_file_column, args=None, kwargs=None,
                                         menu=ConsoleMenu, should_exit=False)
 
+create_plot_from_table = FunctionItem("Show plot", create_pot, args=None, kwargs=None,
+                                      menu=ConsoleMenu, should_exit=False)
+
 
 # Once we're done creating them, we just add the items to the menu
 menu.append_item(print_excel_table)
 menu.append_item(print_excel_table_column)
+menu.append_item(create_plot_from_table)
 
 # Finally, we call show to show the menu and allow the user to interact
 menu.show()
