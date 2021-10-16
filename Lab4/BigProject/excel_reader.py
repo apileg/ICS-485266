@@ -5,8 +5,10 @@ from excel_opener import open_file
 # Read excel file from open_file function
 data = pd.read_excel(fr'{open_file()}')
 
+
 def get_data():
     return data
+
 
 def read_file():
     try:
