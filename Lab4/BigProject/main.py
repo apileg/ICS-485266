@@ -30,11 +30,10 @@ print_excel_table_column = FunctionItem("Print excel column", read_file_column, 
                                         menu=ConsoleMenu, should_exit=False)
 
 create_line_plot_from_table = FunctionItem("Show line plot", create_line_pot, args=None, kwargs=None,
-                                      menu=ConsoleMenu, should_exit=False)
+                                           menu=ConsoleMenu, should_exit=False)
 
 create_bar_plot_from_table = FunctionItem("Show bar plot", create_bar_pot, args=None, kwargs=None,
-                                      menu=ConsoleMenu, should_exit=False)
-
+                                          menu=ConsoleMenu, should_exit=False)
 
 # Once we're done creating them, we just add the items to the menu
 menu.append_item(print_excel_table)

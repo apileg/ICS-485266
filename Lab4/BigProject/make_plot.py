@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+from threading import Thread
 from excel_reader import get_data
 from excel_reader import get_all_columns
 
