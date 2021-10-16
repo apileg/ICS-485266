@@ -14,6 +14,8 @@ def read_file():
     try:
         # Make table data structure
         df = pd.DataFrame(data)
+        # Dropping null value columns to avoid errors
+        df.dropna(inplace=True)
         print(df)
     except FileNotFoundError:
         print("Oops! I can't find the file.")
