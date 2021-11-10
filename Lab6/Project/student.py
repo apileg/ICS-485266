@@ -16,3 +16,7 @@ class Student:
     def individual_attempts(self, attempts: int, last_grade: float):
         print(f'Attempts: {attempts}\n Last grade:{last_grade}')
 
+
+student = Student("Vasia", 4)
+student.exam_attempts(5, 4)
+student.individual_attempts(4, 4)
