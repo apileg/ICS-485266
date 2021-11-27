@@ -40,7 +40,7 @@ def sort_data():
 
     for x in newarr.copy():
         for y in newarr[x].copy():
-            if (newarr[x][y] == None):
+            if newarr[x][y] is None:
                 newarr[x].pop(y)
     # Print DataFrame with our columns and rows
     print(pd.DataFrame(newarr))
