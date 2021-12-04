@@ -5,6 +5,7 @@ from consolemenu.items import *
 
 # Import variables and functions from root files
 import excel_opener
+
 from excel_reader import *
 
 from sort_data import *
@@ -12,6 +13,9 @@ from sort_data import *
 from make_plot import *
 
 # Variables
+from to_json import to_json
+from to_txt import to_text
+
 column = get_all_columns()
 
 
@@ -40,12 +44,18 @@ create_bar_plot_from_table = FunctionItem("Show bar plot", create_bar_pot, args=
 sort_table_data = FunctionItem("Sort", sort_data, args=None, kwargs=None,
                                menu=ConsoleMenu, should_exit=False)
 
+convert_to_json = FunctionItem("Convert to json", to_json, args=None, kwargs=None,
+                               menu=ConsoleMenu, should_exit=False)
+convert_to_text = FunctionItem("Convert to txt", to_text, args=None, kwargs=None,
+                               menu=ConsoleMenu, should_exit=False)
+
 # Once we're done creating them, we just add the items to the menu
 menu.append_item(print_excel_table)
 menu.append_item(print_excel_table_column)
 menu.append_item(create_line_plot_from_table)
 menu.append_item(create_bar_plot_from_table)
 menu.append_item(sort_table_data)
-
+menu.append_item(convert_to_json)
+menu.append_item(convert_to_text)
 # Finally, we call show to show the menu and allow the user to interact
 menu.show()
